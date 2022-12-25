@@ -1,10 +1,18 @@
 const AnsiColours = require('ansi-colours');
 
+// ----------
+// MAKE PREFIX
+// ----------
+
 function makePrefix(env) {
 	return `${AnsiColours.CYAN}${env}${AnsiColours.RESET}`;
 }
 
-function envLog(env, ...messages) {
+// ----------
+// LOG
+// ----------
+
+function log(env, ...messages) {
 	if (process.env[env]) {
 		if (messages.length > 0) {
 			console.log(makePrefix(env), ...messages);
@@ -15,6 +23,10 @@ function envLog(env, ...messages) {
 	return false;
 }
 
+// ----------
+// FACTORY
+// ----------
+
 function factory(env) {
 	if (process.env[env]) {
 		const prefix = makePrefix(env);
@@ -24,6 +36,11 @@ function factory(env) {
 	}
 }
 
-envLog.factory = factory;
+// ----------
+// EXPORTS
+// ----------
 
-module.exports = envLog;
+module.exports = {
+	factory,
+	log
+};

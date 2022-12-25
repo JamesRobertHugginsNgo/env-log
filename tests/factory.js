@@ -1,6 +1,6 @@
-const envLog = require('../index');
+const EnvLog = require('../index');
 
-const log = envLog.factory('ENV_LOG');
+const log = EnvLog.factory('ENV_LOG');
 
 log && log('Testing', 'Success');
 

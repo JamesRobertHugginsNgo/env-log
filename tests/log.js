@@ -1,8 +1,8 @@
-const envLog = require('../index');
+const EnvLog = require('../index');
 
-envLog('ENV_LOG', 'Testing', 'Success');
+EnvLog.log('ENV_LOG', 'Testing', 'Success');
 
-envLog('ENV_LOG') && envLog('ENV_LOG', ...(() => {
+EnvLog.log('ENV_LOG') && EnvLog.log('ENV_LOG', ...(() => {
 	console.log('Function called');
 	return ['Testing', 'Success'];
 })());
