@@ -39,15 +39,15 @@ EnvLog.log('ENV_VAR') && EnvLog.log('ENV_VAR', ...(() => {
 Only checks the environment variable when the factory function is call returning a function when set. This will save some overhead when logging multiple times in a code block.
 
 ``` JavaScript
-const EnvLog = require('../index');
+const EnvLog = require('env-log');
 
 const log = EnvLog.factory('ENV_LOG');
 
 // Always check for the logging function
 // Function will be undefined if ENV_VAR is not set
-log && log('Testing', 'Success');
+log && log('Hello', 'World');
 log && log(...(() => {
 	console.log('Function was called');
-	return ['Testing', 'Success'];
+	return ['Hello', 'World'];
 })());
 ```
