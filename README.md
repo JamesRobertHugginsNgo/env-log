@@ -34,7 +34,7 @@ envLog('ENV_VAR') && envLog('ENV_VAR', ...(() => {
 ## envLog.factory(env)
 
 - env _\<string>_ Environmental variable.
-- Returns: _\<function>_ Function that can be used multiple times to display the messages.
+- Returns: _\<undefined>|\<function>_ Function that can be used multiple times to display the messages.
 
 Only checks the environment variable when the factory function is call returning a function when set. This will save some overhead when logging multiple times in a code block.
 
