@@ -47,7 +47,7 @@ const log = EnvLog.factory('ENV_LOG');
 // Function will be undefined if ENV_VAR is not set
 log && log('Testing', 'Success');
 log && log(...(() => {
-	console.log('Function called');
+	console.log('Function was called');
 	return ['Testing', 'Success'];
 })());
 ```
