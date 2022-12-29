@@ -5,7 +5,7 @@ const AnsiColours = require('ansi-colours');
 // ----------
 
 function makePrefix(env) {
-	return `${AnsiColours.CYAN}${env}${AnsiColours.RESET}`;
+	return `${AnsiColours.MAGENTA}${env}${AnsiColours.RESET}`;
 }
 
 // ----------
