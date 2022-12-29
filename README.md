@@ -1,13 +1,13 @@
 # env-log
 
-Version 1.0.0
+Version 1.1.0
 
 Logging utility that is enabled by setting selected environment variable.
 
 ## Installation
 
 ```
-npm install git+https://github.com/JamesRobertHugginsNgo/env-log.git#1.0.0
+npm install git+https://github.com/JamesRobertHugginsNgo/env-log.git#1.1.0
 ```
 
 ## EnvLog.log(env[, ...messages])
