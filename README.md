@@ -2,7 +2,7 @@
 
 Version 1.1.0
 
-Logging utility that is enabled by setting selected environment variable.
+NodeJS console logging utility that is enabled by setting the specified environment variable.
 
 ## Installation
 
