@@ -2,7 +2,13 @@
   "name": "env-log",
   "version": "1.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/env-log.cjs",
+  "exports": {
+    ".": {
+      "require": "./dist/env-log.cjs",
+      "import": "./dist/env-log.mjs"
+    }
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,9 +24,15 @@
   },
   "homepage": "https://github.com/JamesRobertHugginsNgo/env-log#readme",
   "devDependencies": {
-    "eslint": "^8.30.0"
+    "@babel/core": "^7.20.7",
+    "@babel/plugin-transform-modules-commonjs": "^7.20.11",
+    "del": "^7.0.0",
+    "eslint": "^8.30.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-rename": "^2.0.0"
   },
   "dependencies": {
-    "ansi-colours": "github:JamesRobertHugginsNgo/ansi-colours#1.0.0"
+    "ansi-colours": "github:JamesRobertHugginsNgo/ansi-colours#2.0.1"
   }
 }

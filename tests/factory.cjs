@@ -1,4 +1,4 @@
-const EnvLog = require('../index');
+const EnvLog = require('../dist/env-log.cjs');
 
 const log = EnvLog.factory('ENV_LOG');
 

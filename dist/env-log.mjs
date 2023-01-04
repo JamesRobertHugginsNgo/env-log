@@ -1,4 +1,4 @@
-const AnsiColours = require('ansi-colours');
+import * as AnsiColours from 'ansi-colours';
 
 // ----------
 // MAKE PREFIX
@@ -12,7 +12,7 @@ function makePrefix(env) {
 // LOG
 // ----------
 
-function log(env, ...messages) {
+export function log(env, ...messages) {
 	if (process.env[env]) {
 		if (messages.length > 0) {
 			console.log(makePrefix(env), ...messages);
@@ -27,7 +27,7 @@ function log(env, ...messages) {
 // FACTORY
 // ----------
 
-function factory(env) {
+export function factory(env) {
 	if (process.env[env]) {
 		const prefix = makePrefix(env);
 		return function(...messages) {
@@ -35,12 +35,3 @@ function factory(env) {
 		};
 	}
 }
-
-// ----------
-// EXPORTS
-// ----------
-
-module.exports = {
-	factory,
-	log
-};

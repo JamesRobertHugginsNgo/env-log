@@ -1,4 +1,4 @@
-const EnvLog = require('../index');
+import * as EnvLog from '../dist/env-log.mjs';
 
 EnvLog.log('ENV_LOG', 'Testing', 'Success');
 
