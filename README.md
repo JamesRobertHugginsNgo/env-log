@@ -19,7 +19,7 @@ npm install git+https://github.com/JamesRobertHugginsNgo/env-log.git#2.0.0
 A `console.log` wrapper, calling the function only when the environment variable has a value.
 
 ``` JavaScript
-const EnvLog = require('env-log');
+import * as EnvLog from 'env-log';
 
 EnvLog.log('ENV_VAR', 'Hello', 'World');
 
@@ -39,7 +39,7 @@ EnvLog.log('ENV_VAR') && EnvLog.log('ENV_VAR', ...(() => {
 Only checks the environment variable when the factory function is call returning a function when set. This will save some overhead when logging multiple times in a code block.
 
 ``` JavaScript
-const EnvLog = require('env-log');
+import * as EnvLog from 'env-log';
 
 const log = EnvLog.factory('ENV_LOG');
 
