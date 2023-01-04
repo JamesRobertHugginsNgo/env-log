@@ -1,13 +1,13 @@
 # env-log
 
-Version 1.1.0
+_Version 2.0.0_
 
 NodeJS console logging utility that is enabled by setting the specified environment variable.
 
 ## Installation
 
 ```
-npm install git+https://github.com/JamesRobertHugginsNgo/env-log.git#1.1.0
+npm install git+https://github.com/JamesRobertHugginsNgo/env-log.git#2.0.0
 ```
 
 ## EnvLog.log(env[, ...messages])
